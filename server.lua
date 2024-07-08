@@ -1,7 +1,7 @@
 CreateThread( function()
     local version = GetResourceMetadata(GetCurrentResourceName(), 'version')
     Citizen.Wait(5000)
-    PerformHttpRequest('https://raw.githubusercontent.com/0jayy/version.json', function(code, res, headers)
+    PerformHttpRequest('https://raw.githubusercontent.com/0Jayy07/check-version/main/version.json', function(code, res, headers)
         if code == 200 then
             local response = json.decode(res)
             if response.version ~= version then
